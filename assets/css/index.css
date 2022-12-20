@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: white;
 }
 
 body {
@@ -41,6 +42,5 @@ body main div a button {
   font-size: 35px;
   background-color: green;
   border: #004400;
-  color: white;
   padding: 5px;
 }/*# sourceMappingURL=index.css.map */
