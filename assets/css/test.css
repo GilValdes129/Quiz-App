@@ -19,6 +19,13 @@ body {
   align-items: center;
   background-color: hsl(var(--hue), 100%, 20%);
 }
+body .Timer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  margin: 10px 10px 0 0;
+}
 body .container {
   width: 800px;
   max-width: 80%;

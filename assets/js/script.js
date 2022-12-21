@@ -5,20 +5,38 @@ var questionDiv = document.querySelector("#question");
 var answerbuttons = document.querySelector("#answer-buttons")
 var nextButton = document.querySelector("#next-btn")
 var body = document.querySelector("body")
+var count = 15;
+var timer = document.querySelector("#Timer")
 
 startButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", () => {
     currentQuestionsIndex++;
     setNextQuestion()
+    console.log(currentQuestionsIndex)
 })
 
+
+
 function startGame(){
+    setTime()
     console.log("Started");
     startButton.classList.add("hide");
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestionsIndex = 0;
     questionContainer.classList.remove("hide");
     setNextQuestion();
+}
+
+function setTime(){
+    var timerInterval = setInterval(function() {
+        count--;
+        timer.innerText = count
+        if (count === 0){
+            clearInterval(timerInterval)
+            timer.innerText = "Time out"
+            returnhome()
+        }
+    }, 1000);
 }
 
 function setNextQuestion(){
@@ -39,7 +57,7 @@ function showQuestion(question){
     question.answers.forEach(answer => {
        var button = document.createElement("button");
        button.innerText = answer.text;
-       button.classList.add("btn");;
+       button.classList.add("btn");
        if (answer.correct){
         button.dataset.correct = answer.correct
        }
@@ -59,8 +77,9 @@ function selectAnswer(event){
     if (shuffledQuestions.length > currentQuestionsIndex + 1){
         nextButton.classList.remove("hide")
     } else {
-        startButton.innerText = "Restart"
-        startButton.classList.remove("hide")
+        /*startButton.innerText = "Restart"
+        startButton.classList.remove("hide")*/
+        returnhome()
     }
 }
 
@@ -76,6 +95,14 @@ function setStatusClass(element, correct){
 function clearStatusClass(element){
     element.classList.remove("correct")
     element.classList.remove("wrong")
+}
+
+function returnhome(){
+    setInterval(function(){
+        window.alert("The quiz is done")
+        window.location.href = "../../index.html"
+    }, 2000);
+
 }
 
 var questions = [
