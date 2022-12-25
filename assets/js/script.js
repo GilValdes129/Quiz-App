@@ -5,14 +5,16 @@ var questionDiv = document.querySelector("#question");
 var answerbuttons = document.querySelector("#answer-buttons")
 var nextButton = document.querySelector("#next-btn")
 var body = document.querySelector("body")
-var count = 15;
+var count = 60;
 var timer = document.querySelector("#Timer")
+var score = 0
+localStorage.setItem("score", score)
 
 startButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", () => {
     currentQuestionsIndex++;
     setNextQuestion()
-    console.log(currentQuestionsIndex)
+    //console.log(currentQuestionsIndex)
 })
 
 
@@ -81,12 +83,22 @@ function selectAnswer(event){
         startButton.classList.remove("hide")*/
         returnhome()
     }
+    if (correct){
+        score++
+        localStorage.setItem("score", score)
+        console.log(localStorage.getItem("score"))
+    } else {
+        count -= 5
+    }
 }
 
 function setStatusClass(element, correct){
     clearStatusClass(element);
     if (correct){
         element.classList.add("correct")
+        //console.log("holamundo")
+        //score++
+        //console.log(score)
     } else {
         element.classList.add("wrong")
     }
@@ -123,5 +135,23 @@ var questions = [
             {text: "21", correct: false},
             {text: "20", correct: false},
         ]
-    }
+    },
+    {
+        question: "What is 2+2?",
+        answers: [
+            {text: "4", correct: true},
+            {text: "20", correct: false},
+            {text: "19", correct: false},
+            {text: "18", correct: false},
+        ]
+    },
+    {
+        question: "What is 2+2?",
+        answers: [
+            {text: "4", correct: true},
+            {text: "22", correct: false},
+            {text: "21", correct: false},
+            {text: "20", correct: false},
+        ]
+    },
 ]
