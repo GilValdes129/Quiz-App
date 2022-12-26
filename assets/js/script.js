@@ -1,3 +1,4 @@
+
 var startButton = document.querySelector("#start-btn");
 var questionContainer = document.querySelector("#question-container");
 var shuffledQuestions, currentQuestionsIndex;
@@ -10,14 +11,14 @@ var timer = document.querySelector("#Timer")
 var score = 0
 localStorage.setItem("score", score)
 
+
 startButton.addEventListener("click", startGame);
+
 nextButton.addEventListener("click", () => {
     currentQuestionsIndex++;
     setNextQuestion()
     //console.log(currentQuestionsIndex)
 })
-
-
 
 function startGame(){
     setTime()
@@ -96,9 +97,6 @@ function setStatusClass(element, correct){
     clearStatusClass(element);
     if (correct){
         element.classList.add("correct")
-        //console.log("holamundo")
-        //score++
-        //console.log(score)
     } else {
         element.classList.add("wrong")
     }
@@ -155,3 +153,6 @@ var questions = [
         ]
     },
 ]
+console.log(questions[0])
+
+console.log(score)
