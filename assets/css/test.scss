@@ -80,6 +80,13 @@ body{
                 padding: 10px 20px;
             }
         }
+
+        .HomeBtn{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin: 10px;
+        }
     }
 }
 body.correct{

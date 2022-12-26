@@ -9,6 +9,8 @@ var body = document.querySelector("body")
 var count = 60;
 var timer = document.querySelector("#Timer")
 var score = 0
+var HomeBtn = document.querySelector(".HomeBtn")
+var arr = JSON.parse(localStorage.getItem("players"))
 localStorage.setItem("score", score)
 
 
@@ -108,11 +110,11 @@ function clearStatusClass(element){
 }
 
 function returnhome(){
-    setInterval(function(){
-        window.alert("The quiz is done")
-        window.location.href = "../../index.html"
-    }, 2000);
-
+    window.alert("The quiz is done, press the home button in the bottom right corner")
+    HomeBtn.classList.remove("hide")
+    questionContainer.classList.add("hide")
+    timer.innerText = "Finish"
+    count = "finish"
 }
 
 var questions = [
@@ -153,6 +155,6 @@ var questions = [
         ]
     },
 ]
-console.log(questions[0])
 
-console.log(score)
+
+console.log(arr)

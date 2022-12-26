@@ -73,6 +73,12 @@ body .container .controls .next-btn {
   font-weight: 700;
   padding: 10px 20px;
 }
+body .container .HomeBtn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+}
 
 body.correct {
   --hue: var(--hue-correct);
