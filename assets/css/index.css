@@ -45,6 +45,7 @@ body main div a button {
   font-size: 35px;
   background-color: green;
   border: #004400;
+  cursor: pointer;
   padding: 5px;
 }
 body main div a button:hover {
@@ -58,4 +59,25 @@ body main div h3 {
 }
 body main div ol {
   font-size: 20px;
+}
+body main #ScoreContainer #player-name {
+  color: white;
+  background-color: #3b3bff;
+  border: none;
+  border-left: 4px solid yellow;
+  border-bottom: 4px solid yellow;
+  font-size: 25px;
+  margin-right: 10px;
+}
+body main #ScoreContainer #SubmitBtn {
+  background-color: yellow;
+  color: black;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+body main #ScoreContainer #ScoreList {
+  font-size: 25px;
+  font-weight: 700;
 }/*# sourceMappingURL=index.css.map */
