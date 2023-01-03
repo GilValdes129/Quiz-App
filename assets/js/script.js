@@ -120,42 +120,39 @@ function returnhome(){
 
 var questions = [
     {
-        question: "What is 2+2?",
+        question: "Javascript is an _________ languaje",
         answers: [
-            {text: "4", correct: true},
-            {text: "22", correct: false},
-            {text: "21", correct: false},
-            {text: "20", correct: false},
+            {text: "Object-Oriented", correct: true},
+            {text: "Object-Based", correct: false},
+            {text: "Procedural", correct: false},
+            {text: "None of the above", correct: false},
         ]
     },
     {
-        question: "What is 2*4?",
+        question: "Which of the following methods is used to access HTML elements using Javascript?",
         answers: [
-            {text: "8", correct: true},
-            {text: "22", correct: false},
-            {text: "21", correct: false},
-            {text: "20", correct: false},
+            {text: "getElementbyId()", correct: false},
+            {text: "getElementsByClassName()", correct: false},
+            {text: "querySelector()", correct: false},
+            {text: "All of the above", correct: true},
         ]
     },
     {
-        question: "What is 2+2?",
+        question: "Which of the following methods can be used to display data in some form using Javascript?",
         answers: [
-            {text: "4", correct: true},
-            {text: "20", correct: false},
-            {text: "19", correct: false},
-            {text: "18", correct: false},
+            {text: "All of the above", correct: true},
+            {text: "document.write()", correct: false},
+            {text: "console.log()", correct: false},
+            {text: "window.alert()", correct: false},
         ]
     },
     {
-        question: "What is 2+2?",
+        question: "Which function is used to serialize an object into a JSON string in Javascript?",
         answers: [
-            {text: "4", correct: true},
-            {text: "22", correct: false},
-            {text: "21", correct: false},
-            {text: "20", correct: false},
+            {text: "stringify()", correct: true},
+            {text: "parse()", correct: false},
+            {text: "convert()", correct: false},
+            {text: "None of the above", correct: false},
         ]
     },
 ]
-
-
-console.log(arr)
