@@ -33,6 +33,14 @@ body .container {
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 0 10px 2px;
+  /*.HomeBtn{
+     /* position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 10px;
+      padding: 15px;
+      font-size: 25px;
+  }*/
 }
 body .container .hide {
   display: none;
@@ -68,16 +76,12 @@ body .container .controls {
   align-items: center;
 }
 body .container .controls .start-btn,
-body .container .controls .next-btn {
+body .container .controls .next-btn,
+body .container .controls .HomeBtn {
   font-size: 1.5rem;
   font-weight: 700;
   padding: 10px 20px;
-}
-body .container .HomeBtn {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 10px;
+  color: white;
 }
 
 body.correct {
