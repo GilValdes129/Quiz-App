@@ -5,9 +5,7 @@ var score = localStorage.getItem("score")
 var scorecontainer = document.querySelector("#ScoreContainer")
 var scoreList = document.querySelector("#ScoreList")
 
-var players = [
- 
-]
+var players = JSON.parse(localStorage.getItem("players"))|| []
 players.sort(function(a, b){
     b.score - a.score
 })
